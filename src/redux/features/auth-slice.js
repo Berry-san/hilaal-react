@@ -9,12 +9,12 @@ const auth = createSlice({
     loginSuccess(state, action) {
       state.user = action.payload
     },
-    logOut: (state) => {
+    logUserOut: (state) => {
       state.user = { isAuthenticated: false }
     },
   },
 })
 
-export const { loginSuccess, logOut } = auth.actions
+export const { loginSuccess, logUserOut } = auth.actions
 export const selectUser = (state) => state.auth.user
 export default auth.reducer

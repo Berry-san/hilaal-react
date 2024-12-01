@@ -72,7 +72,6 @@ const RenewPolicy = () => {
         `${API_BASE}vehicle_model?vehicle_make_id=${vehicleMakeId}`,
         config
       )
-      console.log(response)
       setVehicleModel((prevState) => ({
         ...prevState,
         [vehicleMakeId]: response.data.result,
@@ -121,7 +120,6 @@ const RenewPolicy = () => {
           qs.stringify(renewValues.values),
           config
         )
-        console.log(response)
         if (response.data['status_code'] === '0') {
           setPolicies(response.data.result)
           response.data.result.forEach((policy) => {

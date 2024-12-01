@@ -10,6 +10,7 @@ import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { loginSuccess } from '../../redux/features/auth-slice'
+import { logUserOut } from '../../redux/features/auth-slice'
 
 const Login = () => {
   const dispatch = useDispatch()

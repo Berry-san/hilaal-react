@@ -50,40 +50,6 @@ const BuyPolicy = () => {
     user_type_id = role
   }
 
-  // const fetchData = async () => {
-  //   try {
-  //     const config = {
-  //       headers: {
-  //         'Content-Type': 'multipart/form-data',
-  //         'x-api-key': 987654,
-  //       },
-  //     }
-  //     setIsFetching(true)
-
-  //     const responses = await Promise.all([
-  //       axios.get(API_BASE + 'vechile_category', config),
-  //       axios.get(API_BASE + 'vechile_make', config),
-  //       // axios.get('vechile_model', config),
-  //       axios.get(API_BASE + 'vechile_type', config),
-  //       axios.get(API_BASE + 'vechile_color', config),
-  //     ])
-
-  //     setVehicleCategory(responses[0].data.result)
-  //     setVehicleMake(responses[1].data.result)
-  //     // setVehicleModel(responses[2].data.result)
-  //     setVehicleType(responses[2].data.result)
-  //     setVehicleColor(responses[3].data.result)
-  //     setIsFetching(false)
-  //   } catch (error) {
-  //     console.error('Error fetching data:', error)
-  //     setIsFetching(false)
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   fetchData()
-  // }, [])
-
   useEffect(() => {
     const fetchData = async () => {
       setIsFetching(true)
@@ -247,7 +213,7 @@ const BuyPolicy = () => {
           toast.success(response.data.message)
           if (response.data.link) {
             localStorage.setItem(
-              'apiResponse',
+              'certificateData',
               JSON.stringify(response.data.result[0])
             )
             window.location.href = response.data.link
@@ -287,6 +253,7 @@ const BuyPolicy = () => {
               type="text"
               label="Client Name"
               id="insured_name"
+              placeholder="John Doe"
               value={uploadValues.values.insured_name}
               onChange={uploadValues.handleChange}
               onBlur={uploadValues.handleBlur}
@@ -438,6 +405,7 @@ const BuyPolicy = () => {
               type="text"
               label="Engine Number"
               id="engine_no"
+              placeholder="000000000"
               value={uploadValues.values.engine_no}
               onChange={uploadValues.handleChange}
               onBlur={uploadValues.handleBlur}
@@ -448,6 +416,7 @@ const BuyPolicy = () => {
               type="number"
               label="Chasis Number"
               id="chasis_no"
+              placeholder="000000000"
               value={uploadValues.values.chasis_no}
               onChange={uploadValues.handleChange}
               onBlur={uploadValues.handleBlur}

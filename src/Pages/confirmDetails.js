@@ -85,8 +85,6 @@ const ConfirmDetails = ({ params }) => {
     user_type_id,
   } = confirmPolicy
 
-  console.log(confirmPolicy)
-
   const fetchVehicleModels = async (vehicleMakeId) => {
     const config = {
       headers: {

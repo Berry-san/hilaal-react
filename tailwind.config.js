@@ -1,26 +1,3 @@
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: [
-//     './pages/**/*.{js,ts,jsx,tsx,mdx}',
-//     './components/**/*.{js,ts,jsx,tsx,mdx}',
-//     './app/**/*.{js,ts,jsx,tsx,mdx}',
-//   ],
-//   theme: {
-//     extend: {
-//       colors: {
-//         maroon: '#BDBC31',
-//         dark: '#263238',
-//         cream: '#FFFEF6',
-//       },
-//       backgroundImage: {
-//         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-//         'gradient-conic':
-//           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-//       },
-//     },
-//   },
-//   plugins: [],
-// }
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -30,6 +7,10 @@ module.exports = {
         maroon: '#BDBC31',
         dark: '#263238',
         cream: '#FFFEF6',
+      },
+      boxShadow: {
+        ripples:
+          '0 0 0 20px rgba(32, 190, 121, 0.2), 0 0 0 40px rgba(32, 190, 121, 0.1), 0 0 0 60px rgba(32, 190, 121, 0.05)',
       },
     },
   },
